@@ -1,0 +1,21 @@
+JavaScript: true
+
+engines:
+  eslint:
+    enabled: true
+    channel: "eslint-3"
+
+ratings:
+  paths:
+    - "**.js"
+
+engines:
+  duplication:
+    enabled: true
+    config:
+      languages:
+      - javascript:
+
+engines:
+  nodesecurity:
+    enabled: true
