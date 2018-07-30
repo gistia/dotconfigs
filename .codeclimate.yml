@@ -41,10 +41,10 @@ plugins:
       count_threshold: 3
       languages:
         - javascript
+  fixme:
+    enabled: true
   eslint:
     enabled: true
-    fixme:
-      enabled: true
 exclude_patterns:
 - "bin/"
 - "docs/"
@@ -63,7 +63,3 @@ exclude_patterns:
 - "**/vendor/"
 - "**/*_test.go"
 - "**/*.d.ts"
-
-engines:
-exclude_paths:
-- test/
