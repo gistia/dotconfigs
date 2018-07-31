@@ -1,21 +1,65 @@
-JavaScript: true
-
-engines:
+version: "2"
+checks:
+  argument-count:
+    enabled: true
+    config:
+      threshold: 4
+  complex-logic:
+    enabled: true
+    config:
+      threshold: 4
+  file-lines:
+    enabled: true
+    config:
+      threshold: 350
+  method-complexity:
+    enabled: true
+    config:
+      threshold: 5
+  method-count:
+    enabled: true
+    config:
+      threshold: 20
+  method-lines:
+    enabled: true
+    config:
+      threshold: 40
+  nested-control-flow:
+    enabled: true
+    config:
+      threshold: 4
+  return-statements:
+    enabled: true
+    config:
+      threshold: 4
+plugins:
   eslint:
     enabled: true
-    channel: "eslint-3"
-
-ratings:
-  paths:
-    - "**.js"
-
-engines:
   duplication:
     enabled: true
     config:
+      count_threshold: 3
       languages:
-      - javascript:
-
-engines:
-  nodesecurity:
+        - javascript
+  fixme:
     enabled: true
+  eslint:
+    enabled: true
+exclude_patterns:
+- "bin/"
+- "docs/"
+- "config/"
+- "db/"
+- "dist/"
+- "features/"
+- "**/node_modules/"
+- "script/"
+- "**/spec/"
+- "**/test/"
+- "**/tests/"
+- "**/*.test.js"
+- "**/*.test.jsx"
+- "Tests/"
+- "**/vendor/"
+- "**/*_test.go"
+- "**/*.d.ts"
